@@ -15,7 +15,10 @@ static int swallowfloating    = 0;        /* 1 means swallow floating windows by
 static int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
+
+/* download joypixels for emojis and I think FreeSans is used where "" is. */
 static char *fonts[]          = {"", "JoyPixels:size=10"};
+
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -189,7 +192,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
-	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("~/.local/bin/statusbar/sb-snip") },
+	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("~/.local/bin/snip") },
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
@@ -236,17 +239,18 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-	{ Mod1Mask,			XK_F1,		spawn,		SHCMD("~/.local/bin/statusbar/sb-snips") },
+	{ Mod1Mask,			XK_F1,		spawn,		SHCMD("~/.local/bin/snips") },
 	{ Mod1Mask|ShiftMask,			XK_F1,		spawn,		SHCMD("pcmanfm ~/Personal/Pictures/screenshots") },
-	{ MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") },
-	{ MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") },
+	/* { MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") }, */
+	{ Mod1Mask|ShiftMask,			XK_F2,		spawn,		SHCMD("pcmanfm ~/Personal/Pictures/snips") },
+	/* { MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") }, */
 	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
 	{ MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") },
 	{ MODKEY,			XK_F8,		spawn,		SHCMD("mw -Y") },
-	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
-	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
+	{ MODKEY,			XK_F9,		spawn,		SHCMD("~/.local/bin/dmenumount") },
+	{ MODKEY,			XK_F10,		spawn,		SHCMD("~/.local/bin/dmenuumount") },
 	{ MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") },
 	{ MODKEY,			XK_F12,		spawn,		SHCMD("remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"") },
 	{ MODKEY,			XK_space,	zoom,		{0} },
