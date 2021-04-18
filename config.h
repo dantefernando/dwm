@@ -16,8 +16,9 @@ static int smartgaps          = 0;        /* 1 means no outer gap when there is 
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 
-/* download joypixels for emojis and I think FreeSans is used where "" is. */
-static char *fonts[]          = {"", "JoyPixels:size=10"};
+/* Download JoyPixels for emojis. */
+/* doas pacman -S ttf-joypixels */
+static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" };
 
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -153,9 +154,9 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,		8)
 	{ MODKEY,			    XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-	{ MODKEY,			    XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			    XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 2; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			    XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			    XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 2; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	/* { MODKEY,			XK_BackSpace,	spawn,		SHCMD("sysact") }, */
 	/* { MODKEY|ShiftMask,		XK_BackSpace,	spawn,		SHCMD("sysact") }, */
@@ -165,10 +166,10 @@ static Key keys[] = {
 	{ MODKEY,			    XK_q,		killclient,	{0} },
 	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") }, */
 	{ MODKEY,			    XK_w,		spawn,		SHCMD("firefox") },
-	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e sudo nmtui") },
+	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e doas nmtui") },
 	{ MODKEY,			    XK_e,		spawn,		SHCMD("pcmanfm") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("pkill X") },
-	{ MODKEY,			    XK_r,		spawn,		SHCMD(TERMINAL " -e lf") },
+	{ MODKEY,			    XK_r,		spawn,		SHCMD(TERMINAL " -e ranger") },
 	/* { MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("reboot") }, */
 	{ MODKEY,			    XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	/* { MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /1* bstack *1/ */

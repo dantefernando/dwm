@@ -2,6 +2,8 @@
 
 **FORKED FROM [LukeSmith's Build of dwm](https://github.com/lukesmithxyz/dwm)**
 
++ To exit DWM, press `Win+Shift+e`
+
 Modular status bar for dwm written in c.
 
 # Modifying blocks
