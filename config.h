@@ -246,6 +246,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
 	{ Mod1Mask,			XK_F1,		spawn,		SHCMD("~/.local/bin/snips") },
+	{ Mod1Mask,			XK_F2,		spawn,		SHCMD("~/.local/bin/snipSave") },
 	{ Mod1Mask|ShiftMask,			XK_F1,		spawn,		SHCMD("pcmanfm ~/personal/pictures/screenshots") },
 	/* { MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") }, */
 	{ Mod1Mask|ShiftMask,			XK_F2,		spawn,		SHCMD("pcmanfm ~/personal/pictures/snips") },
