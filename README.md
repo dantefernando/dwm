@@ -1,48 +1,45 @@
-# dwmblocks
+# Dante's build of dwm BASED on Luke Smith's Build
 
-**FORKED FROM [LukeSmith's Build of dwm](https://github.com/lukesmithxyz/dwm)**
+## Dante's notes:
+- This is a fork of Luke Smith's dwm build
+- Pretty much the only changes are some custom keybinds for launching applications
+e.g discord and exiting dwm is `win-shift-e`
+- Check `config.h` for keybinds and settings etc.
 
-+ To exit DWM, press `Win+Shift+e`
 
-Modular status bar for dwm written in c.
+## FAQ
 
-# Modifying blocks
+> What are the bindings?
 
-The statusbar is made from text output from commandline programs.  Blocks are
-added and removed by editing the config.h file.
+The source code is the documentation! Check out [config.h](config.h).
 
-# Luke's build
+Okay, okay, actually I keep a readme in `larbs.mom` for my whole system, including the binds here.
+Press `super+F1` to view it in dwm (zathura is required for that binding).
+I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 
-I have dwmblocks read my preexisting scripts
-[here in my dotfiles repo](https://github.com/LukeSmithxyz/voidrice/tree/master/.local/bin/statusbar).
-So if you want my build out of the box, download those and put them in your
-`$PATH`. I do this to avoid redundancy in LARBS, both i3 and dwm use the same
-statusbar scripts.
+## Patches and features
 
-# Signaling changes
+- Clickable statusbar with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
+- Reads xresources colors/variables (i.e. works with `pywal`, etc.).
+- scratchpad: Accessible with mod+shift+enter.
+- New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
+- True fullscreen (`super+f`) and prevents focus shifting.
+- Windows can be made sticky (`super+s`).
+- stacker: Move windows up the stack manually (`super-K/J`).
+- shiftview: Cycle through tags (`super+g/;`).
+- vanitygaps: Gaps allowed across all layouts.
+- swallow patch: if a program run from a terminal would make it inoperable, it temporarily takes its place to save space.
 
-Most statusbars constantly rerun every script every several seconds to update.
-This is an option here, but a superior choice is giving your module a signal
-that you can signal to it to update on a relevant event, rather than having it
-rerun idly.
+## Installation for newbs
 
-For example, the audio module has the update signal 10 by default.  Thus,
-running `pkill -RTMIN+10 dwmblocks` will update it.
+```
+git clone https://github.com/LukeSmithxyz/dwm
+cd dwm
+sudo make install
+```
 
-You can also run `kill -44 $(pidof dwmblocks)` which will have the same effect,
-but is faster.  Just add 34 to your typical signal number.
+Users of Arch-based distros can also install it from the AUR as [dwm-luke-git](https://aur.archlinux.org/packages/dwm-luke-git).
 
-My volume module *never* updates on its own, instead I have this command run
-along side my volume shortcuts in dwm to only update it when relevant.
+## Please install `libxft-bgra`!
 
-Note that all modules must have different signal numbers.
-
-# Clickable modules
-
-Like i3blocks, this build allows you to build in additional actions into your
-scripts in response to click events.  See the above linked scripts for examples
-of this using the `$BLOCK_BUTTON` variable.
-
-For this feature to work, you need the appropriate patch in dwm as well. See
-[here](https://dwm.suckless.org/patches/statuscmd/).
-Credit for those patches goes to Daniel Bylinka (daniel.bylinka@gmail.com).
+This build of dwm does not block color emoji in the status/info bar, so you must install [libxft-bgra](https://aur.archlinux.org/packages/libxft-bgra/) from the AUR, which fixes a libxft color emoji rendering problem, otherwise dwm will crash upon trying to render one. Hopefully this fix will be in all libxft soon enough.
