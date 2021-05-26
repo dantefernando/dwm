@@ -185,9 +185,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
 
 
-	{ MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") },
+	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("poweroff") },
+	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("poweroff") }, */
 	{ MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
@@ -203,13 +203,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY,			    XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
-	{ MODKEY,			    XK_g,		shiftview,	{ .i = -1 } },
+	{ MODKEY,			    XK_p,		shiftview,	{ .i = -1 } },
+	{ MODKEY,			    XK_n,	    shiftview,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
 	{ MODKEY,	            XK_h,		setmfact,	{.f = -0.05 } },
 	{ MODKEY|ShiftMask,	    XK_h,		spawn,	SHCMD(TERMINAL " -e htop") },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
-	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
@@ -225,7 +225,6 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
