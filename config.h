@@ -198,7 +198,8 @@ static Key keys[] = {
 	{ MODKEY,			    XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			    XK_s,		togglesticky,	{0} },
-	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("~/.local/bin/snip") },
+	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("snipTemp") },
+	{ MODKEY|ShiftMask,		XK_F1,		spawn,		SHCMD("screenshotTemp") },
 	{ MODKEY,			    XK_d,		spawn,          SHCMD("dmenu_run") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY,			    XK_f,		togglefullscr,	{0} },
@@ -244,8 +245,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Page_Down,	shifttag,	{ .i = +1 } },
 	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },
 
-	{ Mod1Mask,			XK_F1,		spawn,		SHCMD("~/.local/bin/snips") },
-	{ Mod1Mask,			XK_F2,		spawn,		SHCMD("~/.local/bin/snipSave") },
+	{ Mod1Mask,			XK_F1,		spawn,		SHCMD("screenshot") },
+	{ Mod1Mask,			XK_F2,		spawn,		SHCMD("snipSave") },
 	{ Mod1Mask|ShiftMask,			XK_F1,		spawn,		SHCMD("pcmanfm ~/personal/pictures/screenshots") },
 	/* { MODKEY,			XK_F2,		spawn,		SHCMD("tutorialvids") }, */
 	{ Mod1Mask|ShiftMask,			XK_F2,		spawn,		SHCMD("pcmanfm ~/personal/pictures/snips") },
