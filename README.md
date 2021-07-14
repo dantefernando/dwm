@@ -1,11 +1,16 @@
 # Dante's build of dwm BASED on Luke Smith's Build
 
 ## Dante's notes:
-- This is a fork of Luke Smith's dwm build
+
+- This is a fork of [Luke Smith's dwm build] (https://github.com/lukesmithxyz/dwm)
+- **This build removes the title bar at the top that displays information on the focused window**
 - Pretty much the only changes are some custom keybinds for launching applications
 e.g discord and exiting dwm is `win-shift-e`
 - Check `config.h` for keybinds and settings etc.
 
+## Custom patch applied:
+
+- [No title](https://dwm.suckless.org/patches/notitle/) - This patch hide window title on top bar.
 
 ## FAQ
 
@@ -36,7 +41,7 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 
 ```
 git clone https://github.com/dantefernando/dwmNoTitle
-cd dwm
+cd dwmNoTitle
 sudo make install
 ```
 
