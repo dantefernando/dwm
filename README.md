@@ -1,12 +1,11 @@
 # Dante's build of dwm BASED on Luke Smith's Build
-![](https://img.shields.io/badge/-Gnu-informational?style=flat&logo=GNU&logoColor=white&color=A42E2B) ![](https://img.shields.io/badge/-Linux-informational?style=flat&logo=Linux&logoColor=white&color=000000) ![](https://img.shields.io/badge/-Arch-informational?style=flat&logo=Arch-Linux&logoColor=white&color=1793D1) ![](https://img.shields.io/badge/-Xorg-informational?style=flat&logo=X.Org&logoColor=white&color=F28834) ![](https://img.shields.io/badge/-ZSH-informational?style=flat&logo=gnu-bash&logoColor=white&color=C97E84) ![](https://img.shields.io/badge/-Vim-informational?style=flat&logo=neovim&message="Neovim"&logoColor=white&color=019733)
 
 ## Dante's notes:
-- This is a fork of Luke Smith's dwm build
+
+- This is a fork of [Luke Smith's dwm build] (https://github.com/lukesmithxyz/dwm)
 - Pretty much the only changes are some custom keybinds for launching applications
 e.g discord and exiting dwm is `win-shift-e`
 - Check `config.h` for keybinds and settings etc.
-
 
 ## FAQ
 
@@ -23,23 +22,23 @@ I haven't kept `man dwm`/`dwm.1` updated though. PRs welcome on that, lol.
 - Clickable statusbar with my build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks).
 - Reads xresources colors/variables (i.e. works with `pywal`, etc.).
 - scratchpad: Accessible with mod+shift+enter.
-- New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.
+- **Note: These Layouts are disabled in this current build**
+ 			
+	*- New layouts: bstack, fibonacci, deck, centered master and more. All bound to keys `super+(shift+)t/y/u/i`.*
 - True fullscreen (`super+f`) and prevents focus shifting.
 - Windows can be made sticky (`super+s`).
 - stacker: Move windows up the stack manually (`super-K/J`).
-- shiftview: Cycle through tags (`super+g/;`).
+- shiftview: Cycle through tags (`super+n/p`).
 - vanitygaps: Gaps allowed across all layouts.
 - swallow patch: if a program run from a terminal would make it inoperable, it temporarily takes its place to save space.
 
 ## Installation for newbs
 
 ```
-git clone https://github.com/LukeSmithxyz/dwm
+git clone https://github.com/dantefernando/dwm
 cd dwm
 sudo make install
 ```
-
-Users of Arch-based distros can also install it from the AUR as [dwm-luke-git](https://aur.archlinux.org/packages/dwm-luke-git).
 
 ## Please install `libxft-bgra`!
 
