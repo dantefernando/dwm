@@ -17,8 +17,11 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 
 /* Download JoyPixels for emojis and gnu-free-fonts for FreeSans. */
-/* doas pacman -S ttf-joypixels gnu-free-fonts*/
-static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" };
+/* pacman -S ttf-joypixels gnu-free-fonts */
+/* yay -S ttf-twemoji */
+
+/* static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" }; */
+static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10" };
 
 /* static char normbgcolor[]           = "#222222"; */
 static char normbgcolor[]           = "#000000";
