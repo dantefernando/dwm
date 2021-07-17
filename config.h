@@ -20,7 +20,8 @@ static int topbar             = 1;        /* 0 means bottom bar */
 /* doas pacman -S ttf-joypixels gnu-free-fonts*/
 static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" };
 
-static char normbgcolor[]           = "#222222";
+/* static char normbgcolor[]           = "#222222"; */
+static char normbgcolor[]           = "#000000";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
@@ -141,7 +142,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
 	/* { MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("") }, */
-	{ MODKEY,			XK_grave,	spawn,	SHCMD("dmenuunicode") },
+	{ MODKEY,			XK_grave,	spawn,	SHCMD("~/.local/bin/dmenuunicode") },
 	/* { MODKEY|ShiftMask,		XK_grave,	togglescratch,	SHCMD("") }, */
 	TAGKEYS(			XK_1,		0)
 	TAGKEYS(			XK_2,		1)
@@ -179,7 +180,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_u,		setlayout,	{.v = &layouts[5]} }, /1* monocle *1/ */
 	/* { MODKEY,			XK_i,		setlayout,	{.v = &layouts[6]} }, /1* centeredmaster *1/ */
 	/* { MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
-
+	{ MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[8]} },
 
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
@@ -199,11 +200,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			    XK_s,		togglesticky,	{0} },
 	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("snipTemp") },
-	{ MODKEY|ShiftMask,		XK_F1,		spawn,		SHCMD("screenshotTemp") },
 	{ MODKEY,			    XK_d,		spawn,          SHCMD("dmenu_run") },
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		SHCMD("discord") },
 	{ MODKEY,			    XK_f,		togglefullscr,	{0} },
-	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
+	/* { MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} }, */
+	{ MODKEY|ShiftMask,		XK_f,		spawn,		SHCMD("screenshotTemp") },
 	{ MODKEY,			    XK_p,		shiftview,	{ .i = -1 } },
 	{ MODKEY,			    XK_n,	    shiftview,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
