@@ -196,7 +196,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
 	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") },
-	{ MODKEY,			    XK_backslash,		view,		{0} },
+	/* { MODKEY,			    XK_backslash,		view,		{0} }, */
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
 	{ MODKEY,			    XK_a,		togglegaps,	{0} },
@@ -276,20 +276,24 @@ static Key keys[] = {
 	{ MODKEY,			XK_Delete,	spawn,		SHCMD("dmenurecord kill") },
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 
+	{ MODKEY,			XK_backslash,	spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") },
+	{ MODKEY,			XK_bracketleft,	spawn,		SHCMD("playerctl previous; pkill -RTMIN+15 dwmblocks") },
+	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("playerctl next; pkill -RTMIN+15 dwmblocks") },
+
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 2; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 2; kill -44 $(pidof dwmblocks)") },
-	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("mpc prev") },
-	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("mpc next") },
-	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("mpc pause") },
-	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("mpc play") },
-	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("mpc stop") },
-	{ 0, XF86XK_AudioRewind,	spawn,		SHCMD("mpc seek -10") },
-	{ 0, XF86XK_AudioForward,	spawn,		SHCMD("mpc seek +10") },
-	{ 0, XF86XK_AudioMedia,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
-	{ 0, XF86XK_AudioMicMute,	spawn,		SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") },
+	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("playerctl previous; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl pause; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("playerctl stop; pkill -RTMIN+15 dwmblocks") },
+	/* { 0, XF86XK_AudioRewind,	spawn,		SHCMD("playerctl seek -10") }, */
+	/* { 0, XF86XK_AudioForward,	spawn,		SHCMD("playerctl seek +10") }, */
+	/* { 0, XF86XK_AudioMedia,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") }, */
+	/* { 0, XF86XK_AudioMicMute,	spawn,		SHCMD("pactl set-source-mute @DEFAULT_SOURCE@ toggle") }, */
 	/* { 0, XF86XK_PowerOff,		spawn,		SHCMD("sysact") }, */
-	{ 0, XF86XK_Calculator,		spawn,		SHCMD(TERMINAL " -e bc -l") },
+	/* { 0, XF86XK_Calculator,		spawn,		SHCMD(TERMINAL " -e bc -l") }, */
 	{ 0, XF86XK_Sleep,		spawn,		SHCMD("sudo -A zzz") },
 	{ 0, XF86XK_WWW,		spawn,		SHCMD("firefox") },
 	{ 0, XF86XK_DOS,		spawn,		SHCMD(TERMINAL) },
