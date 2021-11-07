@@ -278,22 +278,22 @@ static Key keys[] = {
 	{ MODKEY,			XK_Delete,	spawn,		SHCMD("dmenurecord kill") },
 	{ MODKEY,			XK_Scroll_Lock,	spawn,		SHCMD("killall screenkey || screenkey &") },
 
-	{ MODKEY,			XK_backslash,	spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") },
-	{ MODKEY,			XK_bracketleft,	spawn,		SHCMD("playerctl previous; pkill -RTMIN+15 dwmblocks") },
-	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("playerctl next; pkill -RTMIN+15 dwmblocks") },
+	{ MODKEY,			XK_backslash,	spawn,		SHCMD("music play-pause; pkill -RTMIN+15 dwmblocks") },
+	{ MODKEY,			XK_bracketleft,	spawn,		SHCMD("music previous; pkill -RTMIN+15 dwmblocks") },
+	{ MODKEY,			XK_bracketright,	spawn,		SHCMD("music next; pkill -RTMIN+15 dwmblocks") },
 
 	{ 0, XF86XK_AudioMute,		spawn,		SHCMD("pamixer -t; pkill -RTMIN+10 dwmblocks") },
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		SHCMD("pamixer --allow-boost -i 2; pkill -RTMIN+10 dwmblocks") },
 	{ 0, XF86XK_AudioLowerVolume,	spawn,		SHCMD("pamixer --allow-boost -d 2; pkill -RTMIN+10 dwmblocks") },
 
-	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("playerctl previous; pkill -RTMIN+15 dwmblocks") },
-	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("playerctl next; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioPrev,		spawn,		SHCMD("music previous; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioNext,		spawn,		SHCMD("music next; pkill -RTMIN+15 dwmblocks") },
 	/* { 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl pause; pkill -RTMIN+15 dwmblocks") }, */
 	/* { 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") }, */
 	/* { 0, XF86XK_AudioStop,		spawn,		SHCMD("playerctl stop; pkill -RTMIN+15 dwmblocks") }, */
-	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") },
-	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") },
-	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("playerctl play-pause; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioPause,		spawn,		SHCMD("music play-pause; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioPlay,		spawn,		SHCMD("music play-pause; pkill -RTMIN+15 dwmblocks") },
+	{ 0, XF86XK_AudioStop,		spawn,		SHCMD("music play-pause; pkill -RTMIN+15 dwmblocks") },
 	/* { 0, XF86XK_AudioRewind,	spawn,		SHCMD("playerctl seek -10") }, */
 	/* { 0, XF86XK_AudioForward,	spawn,		SHCMD("playerctl seek +10") }, */
 	/* { 0, XF86XK_AudioMedia,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") }, */
