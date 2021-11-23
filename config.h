@@ -20,8 +20,8 @@ static int topbar             = 1;        /* 0 means bottom bar */
 /* pacman -S ttf-joypixels gnu-free-fonts */
 /* yay -S ttf-twemoji */
 
-/* static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" }; */
-static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
+/* static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" }; */
+static char *fonts[]          = { "FreeSans:size=11", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
 
 /* static char normbgcolor[]           = "#222222"; */
 static char normbgcolor[]           = "#000000";
@@ -58,12 +58,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	*/
-	/* class    instance      title       	 tags mask    isfloating   isterminal  noswallow  monitor */
-	{ "Gimp",     NULL,       NULL,       	    1 << 8,       0,           0,         0,        -1 },
-	{ TERMCLASS,   NULL,       NULL,       	    0,            0,           1,         0,        -1 },
-	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
-	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
-	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	/* class        instance      title     tags mask    isfloating   isterminal  noswallow  monitor */
+	{ "Gimp",           NULL,       NULL,       1 << 8,       0,           0,         0,        -1 },
+	{ TERMCLASS,        NULL,       NULL,       0,            0,           1,         0,        -1 },
+	{ NULL,             "spterm",   NULL,       SPTAG(0),     1,           1,         0,        -1 },
+	{ NULL,             "spcalc",   NULL,       SPTAG(1),     1,           1,         0,        -1 },
 };
 
 /* layout(s) */
