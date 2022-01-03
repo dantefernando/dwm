@@ -20,17 +20,17 @@ static int topbar             = 1;        /* 0 means bottom bar */
 /* pacman -S ttf-joypixels gnu-free-fonts */
 /* yay -S ttf-twemoji */
 
-/* static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" }; */
-static char *fonts[]          = { "FreeSans:size=11", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
+/* static char *fonts[]          = { "FreeSans:size=12", "JoyPixels:size=10" }; */
+static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
 
 /* static char normbgcolor[]           = "#222222"; */
 static char normbgcolor[]           = "#000000";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#df0067";
+static char selbordercolor[]        = "#ff9999";
 /* static char selbgcolor[]            = "#490204"; */
-static char selbgcolor[]            = "#df0067";
+static char selbgcolor[]            = "#ff9999";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -175,7 +175,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_r,		spawn,		SHCMD(TERMINAL " -e ranger") },
 	/* { MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("reboot") }, */
 	{ MODKEY,			    XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
-	/* { MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /1* bstack *1/ */
+	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
 	/* { MODKEY,			XK_y,		setlayout,	{.v = &layouts[2]} }, /1* spiral *1/ */
 	/* { MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[3]} }, /1* dwindle *1/ */
 	/* { MODKEY,			XK_u,		setlayout,	{.v = &layouts[4]} }, /1* deck *1/ */
@@ -190,7 +190,7 @@ static Key keys[] = {
 
 	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window") },
+	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window duckduckgo.com") },
 	{ MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
