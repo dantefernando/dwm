@@ -175,7 +175,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_r,		spawn,		SHCMD(TERMINAL " -e ranger") },
 	/* { MODKEY|ShiftMask,		XK_r,		spawn,		SHCMD("reboot") }, */
 	{ MODKEY,			    XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
-	/* { MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /1* bstack *1/ */
+	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
 	/* { MODKEY,			XK_y,		setlayout,	{.v = &layouts[2]} }, /1* spiral *1/ */
 	/* { MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[3]} }, /1* dwindle *1/ */
 	/* { MODKEY,			XK_u,		setlayout,	{.v = &layouts[4]} }, /1* deck *1/ */
