@@ -256,9 +256,13 @@ static Key keys[] = {
 	/* { MODKEY,			XK_F3,		spawn,		SHCMD("displayselect") }, */
 	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; pkill -RTMIN+10 dwmblocks") },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
-	{ MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") },
-	{ MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") },
-	{ MODKEY,			XK_F8,		spawn,		SHCMD("mw -Y") },
+	/* { MODKEY,			XK_F6,		spawn,		SHCMD("torwrap") }, */
+	{ MODKEY,			XK_F5,		spawn,		SHCMD("bluetooth connect airpods") },
+	{ MODKEY,			XK_F6,		spawn,		SHCMD("bluetooth disconnect airpods") },
+	{ MODKEY|ShiftMask,			XK_F5,		spawn,		SHCMD("bluetooth connect speaker") },
+	{ MODKEY|ShiftMask,			XK_F6,		spawn,		SHCMD("bluetooth disconnect speaker") },
+	/* { MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") }, */
+	/* { MODKEY,			XK_F8,		spawn,		SHCMD("mw -Y") }, */
 	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
 	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
 	/* { MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") }, */
