@@ -60,9 +60,10 @@ static const Rule rules[] = {
 	*/
 	/* class        instance      title     tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",           NULL,       NULL,       1 << 8,       0,           0,         0,        -1 },
+	{ "Barrier",        NULL,       NULL,       1 << 7,       0,           0,         0,        -1 },
 	{ TERMCLASS,        NULL,       NULL,       0,            0,           1,         0,        -1 },
 	{ NULL,             "spterm",   NULL,       SPTAG(0),     1,           1,         0,        -1 },
-	{ NULL,             "spcalc",   NULL,       SPTAG(1),     1,           1,         0,        -1 },
+	{ NULL,             "spcalc",   NULL,       SPTAG(1),     1,           1,         0,        -1 }
 };
 
 /* layout(s) */
@@ -167,7 +168,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_Tab,		view,		{0} },
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			    XK_q,		killclient,	{0} },
-	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") }, */
+	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("firefox https://www.duckduckgo.com/") },
 	{ MODKEY,			    XK_w,		spawn,		SHCMD("firefox") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e doas nmtui") },
 	{ MODKEY,			    XK_e,		spawn,		SHCMD("pcmanfm") },
@@ -190,7 +191,7 @@ static Key keys[] = {
 
 	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window duckduckgo.com") },
+	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window google.com") },
 	{ MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
