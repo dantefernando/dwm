@@ -185,8 +185,8 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /1* centeredfloatingmaster *1/ */
 	{ MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[8]} },
 
-	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
+	/* { MODKEY,			XK_o,		incnmaster,     {.i = +1 } }, */
+	/* { MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } }, */
 
 
 	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
@@ -262,8 +262,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_F6,		spawn,		SHCMD("bluetooth disconnect airpods") },
 	{ MODKEY|ShiftMask,			XK_F5,		spawn,		SHCMD("bluetooth connect speaker") },
 	{ MODKEY|ShiftMask,			XK_F6,		spawn,		SHCMD("bluetooth disconnect speaker") },
-	/* { MODKEY,			XK_F7,		spawn,		SHCMD("td-toggle") }, */
-	/* { MODKEY,			XK_F8,		spawn,		SHCMD("mw -Y") }, */
+	{ MODKEY,			XK_F7,		spawn,		SHCMD("wifi c") },
+	{ MODKEY,			XK_F8,		spawn,		SHCMD("wifi d") },
 	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
 	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
 	/* { MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") }, */
