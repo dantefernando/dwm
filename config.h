@@ -264,8 +264,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,			XK_F6,		spawn,		SHCMD("bluetooth disconnect speaker") },
 	{ MODKEY,			XK_F7,		spawn,		SHCMD("wifi c") },
 	{ MODKEY,			XK_F8,		spawn,		SHCMD("wifi d") },
-	{ MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") },
-	{ MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") },
+
+	/* { MODKEY,			XK_F9,		spawn,		SHCMD("dmenumount") }, */
+	/* { MODKEY,			XK_F10,		spawn,		SHCMD("dmenuumount") }, */
+	{ MODKEY,			XK_F9,		spawn,		SHCMD("barriers --config ~/.config/barrier/server.conf --disable-crypto && pkill -RTMIN+19 dwmblocks") },
+	{ MODKEY|ShiftMask,	XK_F9,		spawn,		SHCMD("barrierc --name archsp --disable-crypto 192.168.178.130 && pkill -RTMIN+19 dwmblocks") },
+	{ MODKEY,	        XK_F10,		spawn,		SHCMD("pkill barrier && pkill -RTMIN+19 dwmblocks") },
 	/* { MODKEY,			XK_F11,		spawn,		SHCMD("mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)") }, */
 	{ MODKEY,			XK_F11,		spawn,		SHCMD("xbacklight -dec 15; pkill -RTMIN+9 dwmblocks") },
 	{ MODKEY|ShiftMask,			XK_F11,		spawn,		SHCMD("xbacklight -set 0.04; pkill -RTMIN+9 dwmblocks") },
