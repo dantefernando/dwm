@@ -20,8 +20,8 @@ static int topbar             = 1;        /* 0 means bottom bar */
 /* pacman -S ttf-joypixels gnu-free-fonts */
 /* yay -S ttf-twemoji */
 
-/* static char *fonts[]          = { "FreeSans:size=12", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" }; */
-static char *fonts[]          = { "FreeSans:size=11", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
+/* static char *fonts[]          = { "FreeSans:size=11", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" }; */
+static char *fonts[]          = { "FreeSans:size=10", "Twemoji:style=Regular:size=10", "Font Awesome 5 Free", "Font Awesome 5 Brands" };
 
 /* static char normbgcolor[]           = "#222222"; */
 static char normbgcolor[]           = "#000000";
