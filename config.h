@@ -170,6 +170,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_q,		killclient,	{0} },
 	/* { MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") }, */
 	{ MODKEY,			    XK_w,		spawn,		SHCMD("firefox") },
+	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("firefox localhost:58980") },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		SHCMD(TERMINAL " -e doas nmtui") },
 	{ MODKEY,			    XK_e,		spawn,		SHCMD("pcmanfm") },
 	{ MODKEY|ShiftMask,		XK_e,		spawn,		SHCMD("pkill X") },
@@ -191,7 +192,7 @@ static Key keys[] = {
 
 	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
-	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window") },
+	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window duckduckgo.com") },
 	{ MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
 	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
 	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
@@ -212,7 +213,7 @@ static Key keys[] = {
 	{ MODKEY,			    XK_n,	    shiftview,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
 	{ MODKEY,	            XK_h,		setmfact,	{.f = -0.05 } },
-	{ MODKEY|ShiftMask,	    XK_h,		spawn,	SHCMD(TERMINAL " -e htop") },
+	/* { MODKEY|ShiftMask,	    XK_h,		spawn,	SHCMD(TERMINAL " -e htop") }, */
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
@@ -238,10 +239,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_period,	spawn,		SHCMD("mpc next") },
 	{ MODKEY|ShiftMask,		XK_period,	spawn,		SHCMD("mpc repeat") },
 
-	{ MODKEY,			XK_Left,	focusmon,	{.i = -1 } },
-	{ MODKEY|ShiftMask,		XK_Left,	tagmon,		{.i = -1 } },
-	{ MODKEY,			XK_Right,	focusmon,	{.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_Right,	tagmon,		{.i = +1 } },
+	{ MODKEY|ControlMask,	XK_h,	focusmon,	{.i = -1 } },
+	{ MODKEY|ShiftMask,		XK_h,	tagmon,		{.i = -1 } },
+	{ MODKEY|ControlMask,	XK_l,	focusmon,	{.i = +1 } },
+	{ MODKEY|ShiftMask,		XK_l,	tagmon,		{.i = +1 } },
 
 	{ MODKEY,			XK_Page_Up,	shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_Page_Up,	shifttag,	{ .i = -1 } },
