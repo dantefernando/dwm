@@ -193,10 +193,10 @@ static Key keys[] = {
 	/* { MODKEY,			    XK_p,			spawn,		SHCMD("mpc toggle") }, */
 	/* { MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") }, */
 	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("firefox --private-window duckduckgo.com") },
-	{ MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") },
-	{ MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") },
-	{ MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") },
-	{ MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") },
+	/* { MODKEY,			    XK_bracketleft,		spawn,		SHCMD("mpc seek -10") }, */
+	/* { MODKEY|ShiftMask,		XK_bracketleft,		spawn,		SHCMD("mpc seek -60") }, */
+	/* { MODKEY,			    XK_bracketright,	spawn,		SHCMD("mpc seek +10") }, */
+	/* { MODKEY|ShiftMask,		XK_bracketright,	spawn,		SHCMD("mpc seek +60") }, */
 	/* { MODKEY,			    XK_backslash,		view,		{0} }, */
 	/* { MODKEY|ShiftMask,		XK_backslash,		spawn,		SHCMD("") }, */
 
@@ -232,7 +232,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
 	/* { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") }, */
-	{ MODKEY,			XK_m,		spawn,		SHCMD("spotifyb") },
+	/* { MODKEY,			XK_m,		spawn,		SHCMD("spotifyb") }, */
+	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e startSpt") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; pkill -RTMIN+10 dwmblocks") },
 	{ MODKEY,			XK_comma,	spawn,		SHCMD("mpc prev") },
 	{ MODKEY|ShiftMask,		XK_comma,	spawn,		SHCMD("mpc seek 0%") },
